@@ -55,7 +55,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -75,19 +75,12 @@ nav a:hover {
 }
 
 nav ul {
-  position: fixed;
-  background-color: var(--bg-color);
-  flex-direction: column;
-  top: 86px;
-  left: 10%;
-  width: 80%;
-  text-align: center;
-  transform: translateX(120%);
-  transition: transform 0.5s ease-in;
+  display: flex;
+  gap: 1.9rem;
 }
 
 nav ul li {
-  margin: 8px;
+  font-weight :var(--bold-font);
 }
 
 .burger-menu {
