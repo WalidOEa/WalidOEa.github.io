@@ -1,8 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+.agdasima-regular {
+  font-family: "Agdasima", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.agdasima-bold {
+  font-family: "Agdasima", serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -36,6 +45,54 @@ html {
   padding: 0;
   box-sizing: border-box;
   /* border: 2px solid red; */
+}
+
+#dotsOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.name-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  font-family: 'Agdasima', serif; /* Corrected */
+}
+
+.name-overlay .name-top-left {
+  position: fixed;
+  top: 0.2rem;
+  left: 0.5rem;
+  font-size: 10rem;
+  font-weight: var(--bolder-font);
+  color: whitesmoke;
+}
+
+.name-overlay .name-bottom-right {
+  position: fixed;
+  bottom: 0.2rem;
+  right: 0.5rem;
+  font-size: 10rem;
+  font-weight: var(--bolder-font);
+  color: whitesmoke;
+}
+
+.name-overlay .name-top-right {
+  position: fixed;
+  top: 1.5rem; /* Adjust vertical position */
+  right: 3.5rem; /* Adjust horizontal position */
+  font-size: 0.95rem; /* Smaller size */
+  font-weight: var(--bold-font);
+  color: whitesmoke;
 }
 
 ul {
@@ -312,34 +369,6 @@ nav ul li {
 .up-arrow {
   width: 3rem;
   height: 3rem;
-}
-
-.name-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-.name-overlay .name-top-left {
-  position: fixed;
-  top: 0.2rem;
-  left: 2rem;
-  font-size: 8.5rem;
-  font-weight: var(--bolder-font);
-  color: black;
-}
-
-.name-overlay .name-bottom-right {
-  position: fixed;
-  bottom: 0.2rem;
-  right: 2rem;
-  font-size: 8.5rem;
-  font-weight: var(--bolder-font);
-  color: black;
 }
 
 @media screen and (max-width: 720px) {

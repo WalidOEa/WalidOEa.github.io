@@ -11,7 +11,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight, WEBGL);
+    let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+    canvas.position(0, 0);
   
     setAsciiOptions({
       common: {
@@ -61,7 +62,7 @@ function draw() {
     text("omar", 0, 0); 
     pop();
     
-    for (let zOffset = 5; zOffset < 75; zOffset += 5) { 
+    for (let zOffset = 5; zOffset < 60; zOffset += 5) { 
       push();
       translate(0, 0, zOffset); 
       fill(255, 255, 255, 150); 
