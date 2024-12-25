@@ -109,6 +109,7 @@ form#contact-form label {
   font-family: 'Anonymous Pro', serif;
   font-size: 18px;
   color: white;
+	padding-left: 10px;
   margin-bottom: 8px;
 }
 
@@ -132,8 +133,17 @@ form#contact-form input[type="text"]:focus,
 form#contact-form input[type="email"]:focus,
 form#contact-form textarea:focus {
   outline: none;
-  border-color: #007bff; 
+  border-color: red; 
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  color: white; 
+}
+
+form#contact-form input:-webkit-autofill,
+form#contact-form textarea:-webkit-autofill {
+  -webkit-text-fill-color: white;
+  background-color: black !important; 
+  box-shadow: 0 0 0px 1000px black inset !important;
+  border: 1px solid red; 
 }
 
 form#contact-form input[type="submit"] {
