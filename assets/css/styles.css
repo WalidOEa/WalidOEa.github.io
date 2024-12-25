@@ -100,6 +100,63 @@ html {
   z-index: 10001; 
 }
 
+form#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+form#contact-form label {
+  font-family: 'Anonymous Pro', serif;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+form#contact-form input[type="text"],
+form#contact-form input[type="email"],
+form#contact-form textarea {
+  resize: none;
+  width: 80%; 
+  height: 80px; ;
+  font-family: 'Anonymous Pro', serif;
+  font-size: 12px;
+  color: black;
+  background-color: black;
+  border: 1.5px solid white; 
+  border-radius: 0;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+form#contact-form input[type="text"]:focus,
+form#contact-form input[type="email"]:focus,
+form#contact-form textarea:focus {
+  outline: none;
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form#contact-form input[type="submit"] {
+  font-family: 'Anonymous Pro', serif;
+  font-size: 14px;
+  color: white;
+  background-color: #007bff; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#contact-form input[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+form#contact-form textarea {
+  resize: none; 
+  height: 100px;
+}
+
 /* Loading screen */
 #loading-screen {
   position: fixed;
