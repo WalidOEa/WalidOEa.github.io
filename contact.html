@@ -5,17 +5,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/styles.css">
 
+        <title>Contact</title>
+
         <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/p5.asciify@0.6.3/dist/p5.asciify.min.js"></script>
         <script src="libraries/p5.min.js"></script>
         <script src="libraries/p5.sound.min.js"></script>
 
-        <title>About</title>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init({
+                publicKey: "euM6IQhj85hbUh5sP",
+                });
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    emailjs.sendForm('service_4lyam2r', 'template_g40rp3h', this)
+                        .then(() => {
+                            console.log('SUCCESS!');
+                        }, (error) => {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>        
     </head>
     <body>
-        <div id="contactFormContainer">
-            <div id="innerBox"></div>
-        </div>
         <script src="assets/js/contactRender.js"></script>
+
+        <div id="contactFormContainer">
+            <div id="innerBox">
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number" value="697483">
+                    <label>Name</label>
+                    <input type="text" name="user_name">
+                    <label>Email</label>
+                    <input type="email" name="user_email">
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
     </body>
 </html>
