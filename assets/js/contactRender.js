@@ -1,4 +1,5 @@
-let linearGradient;
+let linearGradientLeft;
+let linearGradientRight
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
@@ -16,10 +17,16 @@ function setup() {
     },
   });
 
-  linearGradient = addAsciiGradient("linear", 0, 127, "contact  ", {
+  linearGradientLeft = addAsciiGradient("linear", 0, 127, "contact   ", {
     direction: 1,
     angle: 0,
-    speed: 0.,
+    speed: 0.2,
+  });
+
+  linearGradientRight = addAsciiGradient("linear", 0, 127, "tactnoc   ", {
+    direction: 1,
+    angle: 0,
+    speed: 0.2,
   });
 }
 
@@ -31,7 +38,13 @@ function draw() {
   directionalLight(255, 255, 255, 0, 0, -1);
   torus(200, 50);
 
-  linearGradient.angle += 0.45;
+  linearGradientLeft.angle += 0.35;
+  linearGradientRight.angle -= 0.35;
+
+  if (frameCount % 70 == 0) {
+    linearGradientLeft.enabled = !linearGradientLeft.enabled;
+  }
+  
 }
 
 function windowResized() {
