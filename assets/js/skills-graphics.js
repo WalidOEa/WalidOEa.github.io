@@ -9,7 +9,7 @@ let sqliteIcon;
 let reactIcon;
 let leftY = 0; 
 let rightY = 0; 
-let iconSize = 140; 
+let iconSize = 135; 
 
 function preload() {
   jsIcon = loadImage('assets/icons/icons8-javascript.svg');
