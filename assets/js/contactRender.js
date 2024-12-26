@@ -42,7 +42,6 @@ function draw() {
   rotateX(radians(frameCount * 3));
   rotateY(radians(frameCount));
   directionalLight(255, 255, 255, 0, 0, -1);
-  torus(200, 50);
   pop();
 
   linearGradientLeft.angle += 0.35;
