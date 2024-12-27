@@ -4,7 +4,7 @@ let rightPositions = [];
 let iconSize = 135;
 let iconCount = 12; 
 let speed = 2.5;
-let rightColumnOffset = 75; 
+let rightColumnOffset = 70; 
 
 function preload() {
   icons = [

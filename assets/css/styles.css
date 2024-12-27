@@ -88,16 +88,32 @@ html {
   z-index: 10000; 
 }
 
+#skillsContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1190px; 
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
 #innerBox {
-  position: absolute;
-  width: 650px; 
-  height: 650px;
-  background-color: black; 
-  border: 2px solid white;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-  top: -30px; 
-  left: -30px; 
-  z-index: 10001; 
+    width: 1190px;
+    height: 100%;
+    background-color: black; 
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 10001; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 form#contact-form {
@@ -106,9 +122,9 @@ form#contact-form {
 }
 
 .invisible-box {
-  height: 20px; /* Adjust height to push the label upwards as needed */
-  width: 100%; /* Full width */
-  visibility: hidden; /* Makes the box invisible */
+  height: 20px; 
+  width: 100%;
+  visibility: hidden; 
 }
 
 form#contact-form label {
