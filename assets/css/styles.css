@@ -102,7 +102,7 @@ html {
     z-index: 10000;
 }
 
-#innerBox {
+#innerBoxSkill {
     width: 1190px;
     height: 100%;
     background-color: black; 
@@ -114,6 +114,17 @@ html {
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+#innerBoxContact {
+  width: px;
+  height: 100%;
+  background-color: black; 
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  z-index: 10001; 
+  display: flex;
+  flex-direction: column;
 }
 
 form#contact-form {
