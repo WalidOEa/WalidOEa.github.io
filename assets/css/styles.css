@@ -148,6 +148,25 @@ html {
   border: 1px solid white;
 }
 
+.label a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.label a:hover {
+  color: var(--secondary-color);
+}
+
+.label p {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 5px;
+  color: #b0b0b0;
+}
+
 form#contact-form {
   display: flex;
   flex-direction: column;
