@@ -93,7 +93,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1190px; 
+    width: 1000px; 
     height: 100%;
     background-color: black;
     display: flex;
@@ -103,8 +103,8 @@ html {
 }
 
 #innerBoxSkill {
-    width: 1190px;
-    height: 100%;
+    width: 1000px;
+    height: 80%;
     background-color: black; 
     border: 2px solid white;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -125,6 +125,27 @@ html {
   z-index: 10001; 
   display: flex;
   flex-direction: column;
+}
+
+#labelsContainer {
+  position: absolute;
+  top: 40%; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.label {
+  color: white;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 4px;
+  border: 1px solid white;
 }
 
 form#contact-form {
