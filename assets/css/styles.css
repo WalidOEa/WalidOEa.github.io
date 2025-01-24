@@ -28,6 +28,13 @@
   font-style: normal;
 }
 
+.perfect-dos-vga-437 {
+  font-family: 'Perfect DOS VGA 437', sans-serif;
+}
+
+.perfect-dos-vga-437-win {
+  font-family: 'Perfect DOS VGA 437 Win', sans-serif;
+}
 
 /* Variables */
 :root {
@@ -348,4 +355,83 @@ ul {
 
 .info-link:hover {
   color: gainsboro;
+}
+
+.skills-centered-box {
+  position: absolute; 
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 70%; 
+  height: 100vh; 
+  border: 0.3px solid rgba(255, 255, 255, 0.486); 
+  border-radius: 0px; 
+  background-color: transparent; 
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  padding: 20px; 
+}
+
+.skills-text {
+  font-family: 'Perfect DOS VGA 437', serif;
+  font-size: 2rem;
+  color: whitesmoke;
+  margin-left: 20px; 
+  text-decoration: none; 
+  position: relative;
+  transition: none; 
+}
+
+.skills-text:hover {
+  color: orange; 
+}
+
+.hover-info {
+  display: none; 
+  margin-top: 10px; 
+  display: flex;
+  align-items: center;
+}
+
+.fade-text {
+  font-family: 'Perfect DOS VGA 437', serif;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.486);
+  opacity: 0;
+  transition: opacity 0s ease-in; 
+}
+
+.skills-text:hover + .hover-info {
+  display: flex; 
+}
+
+.skills-text:hover + .hover-info .fade-text {
+  opacity: 1; 
+}
+
+.skills-inner-box-text {
+  font-family: 'Perfect DOS VGA 437', serif;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+.crt {
+  background: linear-gradient(to top, #000000, #000000, #1c1c1c, #1c1c1c);
+  background-size: cover;
+  background-size: 100% 3.25px;
+}
+
+@media screen{
+  .crt {
+    animation: scanlines infinite 55s linear ;
+  }
+} 
+@keyframes scanlines {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -10px;
+  }
 }
