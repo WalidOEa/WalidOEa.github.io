@@ -1,10 +1,10 @@
-let icons = []; 
+let icons = [];
 let leftPositions = [];
-let rightPositions = []; 
+let rightPositions = [];
 let iconSize = 135;
-let iconCount = 12; 
+let iconCount = 11;
 let speed = 2.5;
-let rightColumnOffset = 70; 
+let rightColumnOffset = 70;
 
 function preload() {
   icons = [
@@ -19,7 +19,6 @@ function preload() {
     loadImage('assets/icons/icons8-sqlite.svg'),
     loadImage('assets/icons/icons8-react-native.svg'),
     loadImage('assets/icons/icons8-tailwind-css.svg'),
-    loadImage('assets/icons/icons8-jupyter.svg'),
   ];
 }
 
@@ -38,10 +37,9 @@ function setup() {
   });
 
   for (let i = 0; i < iconCount; i++) {
-    leftPositions.push(i * iconSize); 
-    rightPositions.push(i * iconSize); 
+    leftPositions.push(windowHeight + (i * iconSize));
+    rightPositions.push(-(windowHeight + iconSize * (iconCount - i)));
   }
-  
 }
 
 function draw() {
@@ -52,10 +50,10 @@ function draw() {
     leftPositions[i] -= speed;
     rightPositions[i] += speed;
 
-    if (leftPositions[i] < -(iconSize + windowHeight)) {
-      leftPositions[i] = max(leftPositions) + iconSize; 
+    if (leftPositions[i] < -(windowHeight + iconSize)) {
+      leftPositions[i] = max(leftPositions) + iconSize;
     }
-    if (rightPositions[i] > windowHeight + iconSize) {
+    if (rightPositions[i] > (windowHeight * 0.5) + iconSize) {
       rightPositions[i] = min(rightPositions) - iconSize;
     }
 
@@ -65,7 +63,7 @@ function draw() {
     pop();
 
     push();
-    translate(width / 2 - (iconSize / 2) - 50 - rightColumnOffset, rightPositions[i]); 
+    translate(width / 2 - (iconSize / 2) - 50 - rightColumnOffset, rightPositions[i]);
     image(icons[i], 0, 0, iconSize, iconSize);
     pop();
   }
