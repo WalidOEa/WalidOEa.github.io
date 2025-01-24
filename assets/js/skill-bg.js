@@ -23,9 +23,10 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
-  noStroke();
-
+  let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1');
+  
   setAsciiOptions({
     common: {
       fontSize: 4,
@@ -43,7 +44,8 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0);
+  background(0);
+  noStroke();
 
   // Draw scrolling icons
   for (let i = 0; i < iconCount; i++) {
