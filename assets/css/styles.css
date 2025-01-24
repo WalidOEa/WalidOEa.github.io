@@ -364,8 +364,6 @@ ul {
   transform: translateX(-50%); 
   width: 70%; 
   height: 100vh; 
-  border: 0.3px solid rgba(255, 255, 255, 0.486); 
-  border-radius: 0px; 
   background-color: transparent; 
   display: flex; 
   align-items: flex-start; 
@@ -417,9 +415,9 @@ ul {
 }
 
 .crt {
-  background: linear-gradient(to top, #000000, #000000, #1c1c1c, #1c1c1c);
+  background: linear-gradient(to top, #000000, #000000, #333333, #333333);
   background-size: cover;
-  background-size: 100% 3.25px;
+  background-size: 100% 3.5px;
 }
 
 @media screen{
