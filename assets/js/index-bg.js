@@ -3,14 +3,14 @@ let angleY = 0;
 let font;
 
 function preload() {
-    font = loadFont("assets/fonts/Slabo27px-Regular.ttf"); 
-    loadAsciiFont("assets/fonts/Px437_DOS-V_re_JPN12.ttf");
+    font = loadFont('assets/fonts/Slabo27px-Regular.ttf'); 
+    loadAsciiFont('assets/fonts/Px437_DOS-V_re_JPN12.ttf');
 }
 
 function setup() {
     let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
     canvas.position(0, 0);
-  
+
     setAsciiOptions({
       common: {
         fontSize: 8,
