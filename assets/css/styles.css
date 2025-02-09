@@ -52,10 +52,12 @@
   --transition: 0.3s;
 }
 
-html, body {
+body, html {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  position: relative;
+  background-color: black;
+  z-index: 0;
 }
 
 canvas {
@@ -71,7 +73,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
 }
 
 #dotsOverlay {
@@ -357,39 +358,27 @@ ul {
   color: gainsboro;
 }
 
-.skills-centered-box {
-  position: absolute; 
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); 
-  width: 70%; 
-  height: 100vh; 
-  background-color: transparent; 
-  display: flex; 
-  align-items: flex-start; 
-  justify-content: flex-start; 
-  padding: 20px; 
-}
-
-.skills-text {
-  font-family: 'Perfect DOS VGA 437', serif;
-  font-size: 2rem;
-  color: whitesmoke;
-  margin-left: 20px; 
-  text-decoration: none; 
-  position: relative;
-  transition: none; 
-}
-
 .skills-text:hover {
   color: orange; 
 }
 
 .hover-info {
-  display: none; 
-  margin-top: 10px; 
-  display: flex;
-  align-items: center;
+  opacity: 0;
+  max-height: none;
+  color: rgba(245, 245, 245, 0.331);
+  font-family: 'Perfect DOS VGA 437', serif;
+  font-size: 1rem;
+  margin-top: 5px;
+  transition: none; 
+}
+
+.skills-text:hover + .hover-info {
+  opacity: 1;
+  max-height: 100px; 
+}
+
+.skills-text:hover {
+  color: var(--secondary-color); 
 }
 
 .fade-text {
@@ -400,36 +389,49 @@ ul {
   transition: opacity 0s ease-in; 
 }
 
-.skills-text:hover + .hover-info {
-  display: flex; 
+.lang-icon:hover {
+  transform: scale(1.1); 
 }
 
-.skills-text:hover + .hover-info .fade-text {
-  opacity: 1; 
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; 
+  margin: 0 auto;
+  height: 40%;
+  width: 28%;
+  position: relative;
+  z-index: 0;
 }
 
-.skills-inner-box-text {
+.project-container {
+  text-align: center;
+}
+
+.skills-text {
   font-family: 'Perfect DOS VGA 437', serif;
-  font-size: 1rem;
+  font-size: 1.8rem;
   color: whitesmoke;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  transition: none; 
+  position: relative;
 }
 
-.crt {
-  background: linear-gradient(to top, #000000, #000000, #333333, #333333);
-  background-size: cover;
-  background-size: 100% 3.5px;
+.skills-description p {
+  font-family: 'Perfect DOS VGA 437', monospace;
+  font-size: 1rem;
+  color: #ccc;
+  margin: 5px 0;
 }
 
-@media screen{
-  .crt {
-    animation: scanlines infinite 55s linear ;
-  }
-} 
-@keyframes scanlines {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 -10px;
-  }
+.language-icons {
+  margin-top: 10px;
+}
+
+.lang-icon {
+  width: 60px; 
+  margin: 0 5px; 
 }
