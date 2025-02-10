@@ -2,7 +2,7 @@ let icons = [];
 let leftPositions = [];
 let rightPositions = [];
 let iconSize = 135;
-let iconCount = 11;
+let iconCount = 14;
 let speed = 2.5;
 let rightColumnOffset = 70;
 
@@ -19,6 +19,9 @@ function preload() {
     loadImage('assets/icons/icons8-sqlite.svg'),
     loadImage('assets/icons/icons8-react-native.svg'),
     loadImage('assets/icons/icons8-tailwind-css.svg'),
+    loadImage('assets/icons/icons8-git.svg'),
+    loadImage('assets/icons/icons8-docker.svg'),
+    loadImage('assets/icons/icons8-linux.png')
   ];
 }
 
