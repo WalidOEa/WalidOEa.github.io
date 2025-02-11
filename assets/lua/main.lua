@@ -4,6 +4,10 @@ function love.load()
     Pong.load()
 end
 
+function love.keypressed()
+    Pong.keypressed()
+end
+
 function love.update(dt)
     Pong.update(dt)
 end
