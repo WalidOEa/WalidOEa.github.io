@@ -12,6 +12,10 @@ VIRTUAL_HEIGHT = 243
 function Pong.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
 
+    smallFont = love.graphics.newFont('fonts/Px437_DOS-V_re_JPN12.ttf')
+
+    love.graphics.setFont(smallFont)
+
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen = false,
         resizable = false,
