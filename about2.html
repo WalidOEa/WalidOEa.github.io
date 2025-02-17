@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1">
+    <title>About</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+
+  </head>
+  <body>
+    <div>
+      <canvas id="loadingCanvas" oncontextmenu="event.preventDefault()" width="800" height="600"></canvas>
+      <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
+
+    <script src="assets/js/love-loader.js"></script>
+    <script type="text/javascript" src="assets/js/conway/game.js"></script>
+    <script async type="text/javascript" src="assets/js/conway/love.js" onload="applicationLoad(this)"></script>
+
+    <div class="skills-container">
+      <div class="project-container">
+          <a href="https://github.com/WalidOEa/Fort-2-Jul" class="skills-text">fort-2-jul</a>
+          <div class="hover-info"><span>https://github.com/WalidOEa/Fort-2-Jul</span></div>
+          <div class="skills-description">
+              <p>World's first novel Fortran 77 to Julia transpiler that maps a significant anount of the Fortran domain to the 
+                  Julia sub-domain.</p>
+              <p>Completed in accordance of my dissertation for my undergraduate degree at the University of Southampton.</p>
+          </div>
+          <div class="language-icons">
+              <img src="assets/icons/icons8-java.svg" alt="Java" class="lang-icon">
+              <img src="assets/icons/julia-logo-dark.svg" alt="Julia" class="lang-icon">
+          </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="love-info">Built with <a href="https://github.com/Davidobot/love.js">love.js</a></p>
+      <p class="love-info">Press 'r' to reset</p>
+      <p class="love-info">Press 'c' to clear</p>
+    </footer>
+  </body>
+</html>
