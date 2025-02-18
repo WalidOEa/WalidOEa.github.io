@@ -461,8 +461,62 @@ ul {
   text-align: center;
 }
 
-.love-info {
-  color: white;
+/* Section containing skills/projects */
+.about-section {
+  position: relative;
+  z-index: 1; /* Puts the text on top of the canvas */
+  padding: 20px;
+  color: white; /* Adjust text color if needed */
+}
+
+/* Container for canvases */
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Make canvases cover full screen but stay in the background */
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Keeps it in the background */
+}
+
+/* Footer styling */
+.site-footer {
   font-family: 'Perfect DOS VGA 437', serif;
+  position: relative;
+  z-index: 2; /* Ensures it stays above the canvas */
+  text-align: center;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.about-heading {
+  font-family: 'Perfect DOS VGA 437', serif;
+  font-size: 2.2rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  transition: none; 
+  position: relative;
+}
+
+.about-description p {
+  font-family: 'Perfect DOS VGA 437', monospace;
   font-size: 1rem;
+  color: white;
+  margin: 5px 0;
+}
+
+.canvas-container {
+  opacity: 0.7;
 }

@@ -12,16 +12,42 @@
 
   </head>
   <body>
-      <div>
-        <canvas id="loadingCanvas" oncontextmenu="event.preventDefault()" width="800" height="600"></canvas>
-        <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+      <div class="canvas-container">
+        <canvas id="loadingCanvas" class="background-canvas" oncontextmenu="event.preventDefault()" width="800" height="600"></canvas>
+        <canvas id="canvas" class="background-canvas" oncontextmenu="event.preventDefault()"></canvas>
       </div>
 
     <script src="/assets/js/love-loader.js"></script>
     <script type="text/javascript" src="/assets/js/conway/game.js"></script>
     <script async type="text/javascript" src="/assets/js/conway/love.js" onload="applicationLoad(this)"></script>
-    <footer>
-      <p>Built with <a href="https://github.com/Davidobot/love.js">love.js</a> <button onclick="goFullScreen();">Go Fullscreen</button><br>Hint: Reload the page if screen is blank</p>
+
+    <div class="about-section">
+      <h1 class="about-heading">about me</h1>
+      <div class="about-description">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h1 class="about-heading">hobbies</h1>
+      <div class="about-description">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h1 class="about-heading">accomplishments</h1>
+      <div class="about-description">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>
+        Built with <a href="https://github.com/Davidobot/love.js">love.js</a> 
+        <br>Press 'r' to reset
+        <br>Press 'c' to clear
+      </p>
     </footer>
   </body>
 </html>
