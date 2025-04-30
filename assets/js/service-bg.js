@@ -1,23 +1,26 @@
 let icons = [];
 let leftPositions = [];
 let rightPositions = [];
-let iconSize = 135;
-let iconCount = 15;
-let speed = 2.5;
+let iconSize = 110;
+let iconCount = 13;
+let speed = 3.2;
 let rightColumnOffset = 70;
 
 function preload() {
   icons = [
-    loadImage('assets/icons/debian.png'),
-    loadImage('assets/icons/jellyfin.svg'),
-    loadImage('assets/icons/plex.svg'),
-    loadImage('assets/icons/radarr.svg'),
-    loadImage('assets/icons/sonarr.svg'),
-    loadImage('assets/icons/owncloud.svg'),
-    loadImage('assets/icons/nginx.svg'),
-    loadImage('assets/icons/postgresql.svg'),
+    loadImage('assets/icons/icons8-debian.png'),
     loadImage('assets/icons/icons8-docker.svg'),
-    loadImage('assets/icons/icons8-html-5.svg')
+    loadImage('assets/icons/icons8-cloudflare-24.png'),
+    loadImage('assets/icons/icons8-gluetun.svg'),
+    loadImage('assets/icons/icons8-jellyfin.svg'),
+    loadImage('assets/icons/icons8-jellystat.png'),
+    loadImage('assets/icons/icons8-plex.svg'),
+    loadImage('assets/icons/icons8-overseerr.svg'),
+    loadImage('assets/icons/icons8-radarr.svg'),
+    loadImage('assets/icons/icons8-sonarr.svg'),
+    loadImage('assets/icons/icons8-owncloud.svg'),
+    loadImage('assets/icons/icons8-nginx.svg'),
+    loadImage('assets/icons/icons8-postgresql.svg')
   ];
 }
 

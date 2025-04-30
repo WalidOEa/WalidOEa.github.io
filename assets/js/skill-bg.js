@@ -2,7 +2,7 @@ let icons = [];
 let leftPositions = [];
 let rightPositions = [];
 let iconSize = 135;
-let iconCount = 15;
+let iconCount = 14;
 let speed = 2.5;
 let rightColumnOffset = 70;
 
@@ -21,7 +21,6 @@ function preload() {
     loadImage('assets/icons/icons8-lua-language.svg'),
     loadImage('assets/icons/icons8-git.svg'),
     loadImage('assets/icons/icons8-docker.svg'),
-    loadImage('assets/icons/icons8-ubuntu.png'),
     loadImage('assets/icons/icons8-debian.png')
   ];
 }
